@@ -282,7 +282,7 @@
               <a href="https://pay.hotmart.com/A84381112S?off=8pb44msx&checkoutMode=10" class="btn btn-success btn-lg btn-block" style="text-decoration: none;">
               <span class="span-btn">I Want The Secret Tool</span>		
              </a>
-		    <a href="https://pay.hotmart.com/A84381112S?off=8pb44msx&checkoutMode=10">Add To Cart</a>
+		    <br><a href="https://pay.hotmart.com/A84381112S?off=8pb44msx&checkoutMode=10"><span style="color: #ffffff>Add To Cart</span></a>
             </div>
           </div>
         </div>
@@ -631,52 +631,8 @@ function getParams() {
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script src="./assets/js/com.js"></script>
+    <script src="./assets/js/fbp.js"></script>
 
-<!-- fbp -->
-const clickid = '{subid}';
-const address = `${window.location.protocol}//${window.location.hostname}?_update_tokens=1&sub_id=${clickid}`;
-
-
-document.addEventListener('DOMContentLoaded', function(){
-	var tries = 0
-	
-	let checkInterval = setInterval(function() {
-		let fbp = getCookie('_fbp');
-		
-		if(fbp) {
-			clearInterval(checkInterval);
-			createPixel(`${address}&sub_id_8=`+fbp)
-		}
-		
-		if(tries > 5){
-			clearInterval(checkInterval);
-		}else
-			tries += 1;
-	}, 500);
-});
-
-
-function getCookie(name) {
-	let value = "; " + document.cookie;
-	let parts = value.split("; " + name + "=");
-	
-	if (parts.length === 2) {
-		return parts.pop().split(";").shift();
-	}
-	
-	return null;
-}
-
-function createPixel(url){
-	var img = document.createElement('img');
-	img.class = 'event';
-	img.src = url;
-	img.referrerPolicy = 'no-referrer-when-downgrade';
-	img.style.display = 'none';
-	
-	document.body.appendChild(img);
-}
-<!-- End fbp --> 
 
 </body>
 </html>
