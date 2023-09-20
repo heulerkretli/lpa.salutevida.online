@@ -251,12 +251,12 @@
 
     <div class="banner py-lg-1 py-sm-1 center white">
         <br>
-        <h5><span style="color:#ffffff"><span id="number"></span></span> People Are Watching This Video</h5>
+        <h5>🟢 <span style="color:#ffffff"><span id="number"></span></span> People Are Watching This Video</h5>
         <br>
 
         <script>
-            function add() { number += Math.floor((Math.random() * 6) + 1); document.getElementById("number").innerHTML = number; setTimeout("add()", 10000); }
-            function generate() { number = Math.floor(Math.random() * 11) + 11; document.getElementById("number").innerHTML = number; add(); }
+            function add() { number += Math.floor((Math.random() * 8) + 2); document.getElementById("number").innerHTML = number; setTimeout("add()", 10000); }
+            function generate() { number = Math.floor(Math.random() * 12) + 12; document.getElementById("number").innerHTML = number; add(); }
             generate();
         </script>
 
