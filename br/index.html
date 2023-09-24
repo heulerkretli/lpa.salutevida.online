@@ -48,26 +48,33 @@
 
 <body>
 
-<div class="banner py-lg-1 py-sm-1 center white">
-<script language=javascript type="text/javascript">
-now = new Date
-document.write ("<h6><b>🖐️ CAUTION: DO NOT LEAVE THIS PAGE NOW</b></h6>")
-
-</script>
-    </div>
-
     <header class="py-4">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
 
-                <h5><b><span style="color: #ffffff"><b>We noticed that you live in CITY...</b><br><br>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-Did you know that users of our exclusive tool have a chance to compete for the latest iPhone release every week? Why am I mentioning this? Perhaps you might know Carol Taylor, who lives in your city; she was the last lucky winner, and you could be the next...<br><br>
+        <script>$.get("https://ipinfo.io/json", function (response) {
+                $("#address").html(response.city);
+            }, "jsonp");
+        </script>
 
-<img class="img-fluid" src="./assets/img/Apple-Sanlitun-Beijing-customer-iPhone-14-Pro-01-220916_big.jpg.large.jpg">
+                <h5><b><span style="color: #ffffff"><b>We noticed that you live in <span id="address" style="color:#FF0000;">?</span>...</b><br><br>
+
+Did you know that users of our exclusive tool have a chance to compete for the latest iPhone release every week?<br><br>
                     
-What do you have to lose? If for any reason you find it too challenging or our apps are no longer working for you, you'll have up to 90 days to get your money back in full...<br><br>
+Why am I mentioning this?<br><br>
+                    
+Perhaps you might know Carol Taylor, who lives in your city;<br><br> 
+                    
+She was the last lucky winner, and you could be the next...<br><br>
+
+<img class="img-fluid" src="./assets/img/Apple-Sanlitun-Beijing-customer-iPhone-14-Pro-01-220916_big.jpg.large.jpg"><br><br>
+                    
+What do you have to lose?<br><br>
+                    
+If for any reason you find it too challenging or our apps are no longer working for you, you'll have up to 90 days to get your money back in full...<br><br>
 
 If you really want to leave, there's nothing I can do...<br><br>
 
